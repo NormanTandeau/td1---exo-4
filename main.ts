@@ -3,23 +3,31 @@ input.onButtonPressed(Button.A, function () {
         led.unplot(x, y)
         x += -1
         led.plot(x, y)
-    }
-    if (x == 0 && y == 0) {
+    } else if (x == 0 && y == 0) {
         led.unplot(x, y)
         y += 4
+        x += 4
+        led.plot(x, y)
+    } else if (x == 0) {
+        led.unplot(x, y)
+        y += -1
         x += 4
         led.plot(x, y)
     }
 })
 input.onButtonPressed(Button.B, function () {
-    if (x < 5) {
+    if (x < 4) {
         led.unplot(x, y)
         x += 1
         led.plot(x, y)
-    }
-    if (x == 4 && y == 4) {
+    } else if (x == 4 && y == 4) {
         led.unplot(x, y)
         y += -4
+        x += -4
+        led.plot(x, y)
+    } else if (x == 4) {
+        led.unplot(x, y)
+        y += 1
         x += -4
         led.plot(x, y)
     }
