@@ -37,6 +37,3 @@ let x = 0
 x = 0
 y = 0
 led.plot(x, y)
-basic.forever(function () {
-	
-})
